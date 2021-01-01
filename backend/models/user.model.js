@@ -22,11 +22,11 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         require: true,
-        validate(value) {
-            if (!validator.isStrongPassword(value)) {
-                throw new Error("Weak Password!")
-            }
-        }
+        // validate(value) {
+        //     if (!validator.isStrongPassword(value)) {
+        //         throw new Error("Weak Password!")
+        //     }
+        // }
     },
     userName: {
         type: String,
@@ -40,16 +40,4 @@ const userSchema = new mongoose.Schema({
 
 
 const User = mongoose.model('User', userSchema);
-module.exports=User;
-
-// const user = new User({
-//     name: "Tariq",
-//     email: "tariq@gmail.com",
-//     password: "pakistan123",
-//     userName: "tariq"
-// });
-// user.save().then((user) => {
-//     console.log("data saved! " + user);
-// }).catch((error) => {
-//     console.log(error);
-// });
+module.exports = User;

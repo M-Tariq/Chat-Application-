@@ -1,7 +1,15 @@
-const app = require("express")();
 const User = require('../models/user.model');
 
-exports.getChat = async (req, res, next) => {
+exports.getChat = (req, res, next) => {
     //const users=await User.find({});
-    res.send("Get chat request");
+    res.send("/users request ~Get chat request");
+}
+exports.sendMessage=(req, res, next)=>{
+    res.send("/users request ~send message route");
+
+}
+
+exports.deleteMessage=(req, res, next)=>{
+    res.send("/users request ~delete message route");
+
 }

@@ -1,7 +1,6 @@
-const express=require('express');
-const validator=require('validator');
-const mongoose=require('mongoose');
-const messageSchema=new mongoose.Schema({
+const validator = require('validator');
+const mongoose = require('mongoose');
+const messageSchema = new mongoose.Schema({
     text: {
         type: String,
         required: true
@@ -10,10 +9,10 @@ const messageSchema=new mongoose.Schema({
         type: String,
         required: true
     },
-    time:{
+    time: {
     }
 });
 
-const Message=mongoose.model('Message', messageSchema);
-module.exports=Message;
+const Message = mongoose.model('Message', messageSchema);
+module.exports = Message;
 
